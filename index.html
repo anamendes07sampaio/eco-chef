@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,210 +22,57 @@
             padding: 20px 16px 40px;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 28px;
-            margin-top: 16px;
-        }
+        header { text-align: center; margin-bottom: 28px; margin-top: 16px; }
+        header h1 { font-family: 'Playfair Display', serif; color: #2e5c1e; font-size: 2.4rem; letter-spacing: -0.5px; margin-bottom: 6px; }
+        header p { color: #6b7c5e; font-size: 1rem; max-width: 340px; margin: 0 auto; line-height: 1.5; }
+        .folha { font-size: 1.6rem; margin-bottom: 4px; display: block; }
 
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            color: #2e5c1e;
-            font-size: 2.4rem;
-            letter-spacing: -0.5px;
-            margin-bottom: 6px;
-        }
+        .container { background: white; padding: 28px 24px; border-radius: 18px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); width: 100%; max-width: 560px; }
 
-        header p {
-            color: #6b7c5e;
-            font-size: 1rem;
-            max-width: 340px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
+        label { display: block; font-weight: 700; margin-bottom: 10px; color: #2e5c1e; font-size: 1rem; }
 
-        .folha {
-            font-size: 1.6rem;
-            margin-bottom: 4px;
-            display: block;
-        }
+        input[type="text"] { width: 100%; padding: 14px 16px; border: 2px solid #d6e8cc; border-radius: 10px; font-size: 1rem; font-family: 'Lato', sans-serif; color: #333; background: #fafff7; transition: border-color 0.3s; margin-bottom: 14px; }
+        input[type="text"]:focus { border-color: #2e5c1e; outline: none; }
 
-        .container {
-            background: white;
-            padding: 28px 24px;
-            border-radius: 18px;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-            width: 100%;
-            max-width: 560px;
-        }
-
-        label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #2e5c1e;
-            font-size: 1rem;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #d6e8cc;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-family: 'Lato', sans-serif;
-            color: #333;
-            background: #fafff7;
-            transition: border-color 0.3s;
-            margin-bottom: 14px;
-        }
-
-        input[type="text"]:focus {
-            border-color: #2e5c1e;
-            outline: none;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 6px;
-        }
-
-        .btn-main {
-            flex: 2;
-            background-color: #2e5c1e;
-            color: white;
-            border: none;
-            padding: 14px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 700;
-            font-family: 'Lato', sans-serif;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
+        .button-group { display: flex; gap: 10px; margin-bottom: 6px; }
+        .btn-main { flex: 2; background-color: #2e5c1e; color: white; border: none; padding: 14px; border-radius: 10px; font-size: 1rem; font-weight: 700; font-family: 'Lato', sans-serif; cursor: pointer; transition: background-color 0.3s; }
         .btn-main:hover { background-color: #1e3f12; }
-
-        .btn-clear {
-            flex: 1;
-            background-color: #eae8e3;
-            color: #666;
-            border: none;
-            padding: 14px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 700;
-            font-family: 'Lato', sans-serif;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
+        .btn-clear { flex: 1; background-color: #eae8e3; color: #666; border: none; padding: 14px; border-radius: 10px; font-size: 1rem; font-weight: 700; font-family: 'Lato', sans-serif; cursor: pointer; transition: background-color 0.3s; }
         .btn-clear:hover { background-color: #d5d3ce; }
+        .hint { font-size: 0.82rem; color: #9aaa8a; margin-top: 8px; text-align: center; }
 
-        .hint {
-            font-size: 0.82rem;
-            color: #9aaa8a;
-            margin-top: 8px;
-            text-align: center;
-        }
-
-        /* Resultado */
-        .recipe-content {
-            background-color: #f4faf0;
-            padding: 22px;
-            border-left: 5px solid #2e5c1e;
-            border-radius: 12px;
-            margin-top: 24px;
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-
+        .recipe-content { background-color: #f4faf0; padding: 22px; border-left: 5px solid #2e5c1e; border-radius: 12px; margin-top: 24px; display: none; animation: fadeIn 0.4s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-        .recipe-img {
-            width: 100%;
-            max-height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 16px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+        .recipe-img { width: 100%; max-height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .recipe-content h2 { font-family: 'Playfair Display', serif; color: #2e5c1e; font-size: 1.3rem; margin-bottom: 14px; line-height: 1.4; }
+        .recipe-content p { line-height: 1.7; color: #444; font-size: 0.97rem; }
 
-        .recipe-content h2 {
-            font-family: 'Playfair Display', serif;
-            color: #2e5c1e;
-            font-size: 1.3rem;
-            margin-bottom: 14px;
-            line-height: 1.4;
-        }
+        .badge { display: inline-block; background: #e6f4df; color: #2e5c1e; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        .recipe-content p {
-            line-height: 1.7;
-            color: #444;
-            font-size: 0.97rem;
-        }
+        .extra-section { border-radius: 10px; padding: 14px 16px; margin-top: 14px; font-size: 0.92rem; line-height: 1.7; }
+        .extra-section h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 6px; }
 
-        .badge {
-            display: inline-block;
-            background: #e6f4df;
-            color: #2e5c1e;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .sec-acomp { background: #f0f7eb; border-left: 4px solid #2e5c1e; color: #2e4a18; }
+        .sec-acomp h3 { color: #2e5c1e; }
+        .sec-beb { background: #fff8f0; border-left: 4px solid #e07b20; color: #6b3a0f; }
+        .sec-beb h3 { color: #e07b20; }
+        .sec-dica { background: #fffbe6; border-left: 4px solid #f0c040; color: #5a4800; }
+        .sec-dica h3 { color: #b8860b; }
+        .sec-aprov { background: #f0faf5; border-left: 4px solid #2e8b57; color: #1a4a30; }
+        .sec-aprov h3 { color: #2e8b57; }
+        .sec-curio { background: #f5f0ff; border-left: 4px solid #7c5cbf; color: #3d2b6b; }
+        .sec-curio h3 { color: #7c5cbf; }
+        .sec-mem { background: #fff5f5; border-left: 4px solid #c0574a; color: #6b2020; font-style: italic; }
+        .sec-mem h3 { color: #c0574a; font-style: normal; }
 
-        .dica-anti {
-            background: #fffbe6;
-            border-left: 4px solid #f0c040;
-            padding: 10px 14px;
-            border-radius: 8px;
-            margin-top: 14px;
-            font-size: 0.9rem;
-            color: #5a4800;
-        }
+        .divider { border: none; border-top: 1px solid #e0ddd5; margin: 28px 0 24px; }
 
-        /* Divisor */
-        .divider {
-            border: none;
-            border-top: 1px solid #e0ddd5;
-            margin: 28px 0 24px;
-        }
-
-        /* Botão WhatsApp */
-        .btn-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 700;
-            font-family: 'Lato', sans-serif;
-            transition: background-color 0.3s;
-        }
-
+        .btn-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background-color: #25D366; color: white; text-decoration: none; padding: 15px; border-radius: 12px; font-size: 1rem; font-weight: 700; font-family: 'Lato', sans-serif; transition: background-color 0.3s; }
         .btn-whatsapp:hover { background-color: #1da851; }
+        .btn-whatsapp svg { flex-shrink: 0; }
 
-        .btn-whatsapp svg {
-            flex-shrink: 0;
-        }
-
-        footer {
-            margin-top: 32px;
-            text-align: center;
-            color: #aaa;
-            font-size: 0.8rem;
-        }
+        footer { margin-top: 32px; text-align: center; color: #aaa; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -234,24 +84,27 @@
     </header>
 
     <div class="container">
-
         <label for="ingredientes">O que você tem disponível hoje?</label>
-        <input type="text" id="ingredientes"
-            placeholder="Ex: pinhão, carne seca, abóbora, morango...">
+        <input type="text" id="ingredientes" placeholder="Ex: pinhão, carne seca, abóbora, morango...">
 
         <div class="button-group">
             <button class="btn-main" onclick="gerarReceita()">Ver Receita Completa</button>
             <button class="btn-clear" onclick="limparTudo()">Limpar</button>
         </div>
 
-        <p class="hint">Tente: pinhão · abóbora · peixe · pêssego · morango · manga · abacaxi</p>
+        <p class="hint">Tente: pinhão · abóbora · peixe · pêssego · morango · manga · abacaxi · jabuticaba · milho</p>
 
         <div id="resultBox" class="recipe-content">
             <img id="recipeImage" class="recipe-img" src="" alt="Foto da receita">
             <span id="recipeBadge" class="badge"></span>
             <h2 id="recipeTitle"></h2>
             <p id="recipeText"></p>
-            <div id="recipeDica" class="dica-anti"></div>
+            <div id="secAcomp" class="extra-section sec-acomp"></div>
+            <div id="secBeb" class="extra-section sec-beb"></div>
+            <div id="secDica" class="extra-section sec-dica"></div>
+            <div id="secAprov" class="extra-section sec-aprov"></div>
+            <div id="secCurio" class="extra-section sec-curio"></div>
+            <div id="secMem" class="extra-section sec-mem"></div>
         </div>
 
         <hr class="divider">
@@ -260,15 +113,12 @@
             Transforme sua rotina na cozinha! 🍳 Explore ideias versáteis, fáceis e com zero desperdício — de doces, salgados e muito mais. Sentiu falta de alguma receita ou quer tirar dúvidas sobre o preparo? Fale diretamente comigo pelo WhatsApp, sua sugestão é muito importante para mim!
         </p>
 
-        <a class="btn-whatsapp"
-            href="https://wa.me/5548998148922?text=Olá!%20Vim%20pelo%20Eco-Chef%20e%20gostaria%20de%20tirar%20uma%20dúvida%20ou%20fazer%20uma%20sugestão."
-            target="_blank">
+        <a class="btn-whatsapp" href="https://wa.me/5548998148922?text=Olá!%20Vim%20pelo%20Eco-Chef%20e%20gostaria%20de%20tirar%20uma%20dúvida%20ou%20fazer%20uma%20sugestão." target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
                 <path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.01L0 24l6.18-1.57A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.22-3.48-8.52zm-8.52 18.4a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.67.93.98-3.57-.24-.37A9.9 9.9 0 0 1 2.1 12c0-5.46 4.44-9.9 9.9-9.9 2.64 0 5.12 1.03 6.99 2.9A9.84 9.84 0 0 1 21.9 12c0 5.46-4.44 9.88-9.9 9.88zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97s-.47-.15-.67.15-.77.97-.94 1.17-.35.22-.65.07a8.15 8.15 0 0 1-2.4-1.48 9.01 9.01 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52s.2-.3.3-.5.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.21 3.08 2.1 3.2 5.08 4.49c.71.3 1.26.49 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42s.25-1.29.17-1.42c-.07-.13-.27-.2-.57-.35z"/>
             </svg>
             Fale com o Eco-Chef
         </a>
-
     </div>
 
     <footer>Eco-Chef &copy; 2026 · Cozinha Consciente &amp; Sem Desperdício 🌱</footer>
@@ -280,170 +130,149 @@
                 imagem: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600",
                 badge: "🍲 Salgado · Inverno",
                 titulo: "Sopa Cremosa de Pinhão com Carne Seca",
-                texto: `<strong>Tempo:</strong> 50 min<br><br>
-<strong>Ingredientes:</strong> 500g de pinhão cozido e descascado · 200g de carne seca dessalgada e desfiada · 200ml de leite de coco · 1 cebola · 3 dentes de alho · caldo de legumes · cebolinha · sal e pimenta a gosto.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Bata metade do pinhão cozido com o leite de coco no liquidificador até obter um creme liso.<br>
-2. Refogue a carne seca com cebola e alho em uma panela com um fio de azeite.<br>
-3. Acrescente o creme de pinhão e os pinhões inteiros restantes. Ajuste o sal.<br>
-4. Deixe apurar em fogo baixo por 10 minutos, mexendo de vez em quando.<br>
-5. Finalize com cebolinha fresca picada e sirva bem quente.`,
-                dica: "♻️ Dica Anti-Desperdício: A água do cozimento do pinhão pode virar um caldo nutritivo base para outros pratos."
+                texto: `<strong>Tempo:</strong> 50 min<br><br><strong>Ingredientes:</strong> 500g de pinhão cozido e descascado · 200g de carne seca dessalgada e desfiada · 200ml de leite de coco · 1 cebola · 3 dentes de alho · caldo de legumes · cebolinha · sal e pimenta a gosto.<br><br><strong>Modo de Preparo:</strong><br>1. Bata metade do pinhão cozido com o leite de coco no liquidificador até obter um creme liso.<br>2. Refogue a carne seca com cebola e alho em uma panela com um fio de azeite.<br>3. Acrescente o creme de pinhão e os pinhões inteiros restantes. Ajuste o sal.<br>4. Deixe apurar em fogo baixo por 10 minutes, mexendo de vez em quando.<br>5. Finalize com cebolinha fresca picada e sirva bem quente.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz branco soltinho · Pão de queijo quentinho · Salada verde com rúcula e tomate · Farofa crocante de manteiga`,
+                beb: `<h3>🥤 Harmonização</h3>Chá preto com limão · Suco de laranja natural · Cachaça artesanal gelada · Água com rodelas de limão e hortelã`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Para dessalgar a carne seca mais rápido, troque a água pelo menos três vezes ao longo do dia anterior. Se quiser acelerar, cozinhe na pressão por 15 minutos e descarte a água antes de usar.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>A água do cozimento do pinhão é rica em amido e pode virar a base de um caldo nutritivo para sopas e risotos. Os fios de carne que sobram da panela ficam ótimos misturados ao arroz no dia seguinte.`,
+                curio: `<h3>🌎 Você Sabia?</h3>O pinhão é a semente da araucária, árvore símbolo do Sul do Brasil. Ele só é colhido entre abril e julho, quando cai naturalmente das pinhas. Por isso é considerado um alimento sazonal e especial, muito ligado às festas juninas do Sul.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Tem cheiros que aquecem antes mesmo de a colher chegar à boca. Uma sopa de pinhão fumegando na mesa é um desses — lembra fogueira, inverno, gente querida reunida e o prazer simples de comer algo feito com cuidado."`
             },
             {
                 chaves: ['milho', 'carne seca'],
-                imagem: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=600",
+                imagem: "https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=600",
                 badge: "🌽 Salgado",
                 titulo: "Creme de Milho com Carne Seca ao Leite de Coco",
-                texto: `<strong>Tempo:</strong> 35 min<br><br>
-<strong>Ingredientes:</strong> 2 latas de milho · 200g de carne seca dessalgada e desfiada · 200ml de leite de coco · 1 cebola · 2 dentes de alho · 1 colher de sopa de manteiga · sal e coentro ou salsinha a gosto.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Bata o milho com o leite de coco no liquidificador até virar um creme.<br>
-2. Refogue a carne seca desfiada com cebola e alho na manteiga.<br>
-3. Adicione o creme de milho à panela e mexa em fogo médio até encorpar.<br>
-4. Acerte o sal e finalize com ervas frescas na hora de servir.`,
-                dica: "♻️ Dica Anti-Desperdício: Use o sabugo do milho fresco para aromatizar caldos ou chás."
+                texto: `<strong>Tempo:</strong> 35 min<br><br><strong>Ingredientes:</strong> 2 latas de milho · 200g de carne seca dessalgada e desfiada · 200ml de leite de coco · 1 cebola · 2 dentes de alho · 1 colher de sopa de manteiga · sal e coentro ou salsinha a gosto.<br><br><strong>Modo de Preparo:</strong><br>1. Bata o milho com o leite de coco no liquidificador até virar um creme.<br>2. Refogue a carne seca desfiada com cebola e alho na manteiga.<br>3. Adicione o creme de milho à panela e mexa em fogo médio até encorpar.<br>4. Acerte o sal e finalize com ervas frescas na hora de servir.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz branco · Banana frita crocante · Torradas artesanais · Salada de agrião com tomate cereja`,
+                beb: `<h3>🥤 Harmonização</h3>Suco de maracujá natural · Limonada suíça · Chá de erva-cidreira gelado · Água de coco`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Se usar milho fresco, rale os grãos diretamente na panela para um sabor muito mais intenso e um creme mais rústico. Uma pitada de noz-moscada no final transforma completamente o prato.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>O sabugo do milho fresco não vai para o lixo! Ferva com água, uma folha de louro e sal para fazer um caldo aromático. Também pode ser usado para defumar carnes na churrasqueira.`,
+                curio: `<h3>🌎 Você Sabia?</h3>O milho é um dos alimentos mais antigos cultivados pela humanidade, com mais de 10 mil anos de história. No Brasil, está presente em centenas de receitas regionais — do cuscuz nordestino à pamonha mineira, da polenta gaúcha ao curau paulista.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Creme de milho é daquelas receitas que aparecem quando alguém chega de repente e a geladeira está quase vazia. Com uma lata de milho e um pouco de criatividade, a mesa se transforma. Isso é cozinha de verdade."`
             },
             {
                 chaves: ['abóbora', 'carne seca'],
-                imagem: "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600",
+                imagem: "https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=600",
                 badge: "🎃 Salgado",
                 titulo: "Abóbora Recheada com Carne Seca",
-                texto: `<strong>Tempo:</strong> 60 min<br><br>
-<strong>Ingredientes:</strong> 1 abóbora cabotiá média · 300g de carne seca dessalgada e desfiada · requeijão cremoso a gosto · muçarela para gratinar · azeite · sal e pimenta.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Corte a abóbora ao meio, remova as sementes e pincele azeite na casca.<br>
-2. Leve ao forno a 200°C por 30 minutos ou até amaciar.<br>
-3. Retire parte da polpa, misture com a carne seca refogada e o requeijão.<br>
-4. Recheie a abóbora, cubra com muçarela e leve ao forno por mais 15 minutos até gratinar.`,
-                dica: "♻️ Dica Anti-Desperdício: As sementes da abóbora podem ser lavadas, temperadas com sal e azeite, e tostadas no forno por 15 minutos. Viram um petisco nutritivo e crocante!"
+                texto: `<strong>Tempo:</strong> 60 min<br><br><strong>Ingredientes:</strong> 1 abóbora cabotiá média · 300g de carne seca dessalgada e desfiada · requeijão cremoso a gosto · muçarela para gratinar · azeite · sal e pimenta.<br><br><strong>Modo de Preparo:</strong><br>1. Corte a abóbora ao meio, remova as sementes e pincele azeite na casca.<br>2. Leve ao forno a 200°C por 30 minutos ou até amaciar.<br>3. Retire parte da polpa, misture com a carne seca refogada e o requeijão.<br>4. Recheie a abóbora, cubra com muçarela e leve ao forno por mais 15 minutos até gratinar.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz branco com alho · Salada de folhas verdes · Farofa de bacon · Pão caseiro quentinho`,
+                beb: `<h3>🥤 Harmonização</h3>Suco de goiaba natural · Chá de gengibre com limão · Água saborizada com pepino e hortelã · Vinho tinto suave`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Escolha uma abóbora cabotiá de casca bem firme e cor escura — ela é mais saborosa e adoça naturalmente o recheio. Se quiser um toque especial, adicione uma colher de mel à mistura do recheio antes de levar ao forno.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>As sementes da abóbora são um tesouro! Lave bem, tempere com azeite, sal e páprica e toste no forno por 15 minutos. Viram um petisco crocante e nutritivo, rico em zinco e ômega-3. A casca também pode ir para o caldo de legumes.`,
+                curio: `<h3>🌎 Você Sabia?</h3>A abóbora cabotiá, também chamada de moranga japonesa ou kabocha, chegou ao Brasil com imigrantes japoneses. Ela é mais adocicada que as abóboras comuns e tem a casca comestível quando bem cozida, o que reduz ainda mais o desperdício.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Existe algo muito bonito em servir uma refeição dentro da própria abóbora. A mesa ganha uma apresentação especial sem nenhum esforço extra — e quem come sente que foi preparado com carinho."`
             },
             {
                 chaves: ['peixe', 'pinhão'],
                 imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600",
                 badge: "🐟 Salgado",
                 titulo: "Peixe Assado com Crosta de Pinhão e Molho de Coco",
-                texto: `<strong>Tempo:</strong> 60 min<br><br>
-<strong>Ingredientes:</strong> Filé de peixe branco (tilápia, merluza ou robalo) · pinhão cozido e picado · 200ml de leite de coco · cebolinha · azeite · alho · sal e limão.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Tempere o filé com sal, limão e alho e deixe marinar por 15 minutos.<br>
-2. Cubra a parte superior com os pinhões picados, pressionando levemente.<br>
-3. Leve ao forno a 180°C por 25 a 30 minutos.<br>
-4. Enquanto isso, reduza o leite de coco com cebolinha em fogo baixo até formar um molho cremoso.<br>
-5. Sirva o peixe regado com o molho de coco.`,
-                dica: "♻️ Dica Anti-Desperdício: As aparas e espinhas do peixe podem ser aproveitadas para fazer um caldo de peixe rico, base perfeita para risotos e sopas."
+                texto: `<strong>Tempo:</strong> 60 min<br><br><strong>Ingredientes:</strong> Filé de peixe branco (tilápia, merluza ou robalo) · pinhão cozido e picado · 200ml de leite de coco · cebolinha · azeite · alho · sal e limão.<br><br><strong>Modo de Preparo:</strong><br>1. Tempere o filé com sal, limão e alho e deixe marinar por 15 minutos.<br>2. Cubra a parte superior com os pinhões picados, pressionando levemente.<br>3. Leve ao forno a 180°C por 25 a 30 minutos.<br>4. Enquanto isso, reduza o leite de coco com cebolinha em fogo baixo até formar um molho cremoso.<br>5. Sirva o peixe regado com o molho de coco.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz de limão siciliano · Legumes assados no azeite · Purê de batata-doce · Salada de folhas com molho de iogurte`,
+                beb: `<h3>🥤 Harmonização</h3>Vinho branco seco gelado · Suco de abacaxi com hortelã · Água com limão e gengibre · Chá verde gelado`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Para a crosta de pinhão ficar bem aderida, passe uma camada fina de mostarda dijon no filé antes de adicionar os pinhões picados. Ela cola a crosta e acrescenta um sabor sutil muito especial.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>As aparas e espinhas do peixe não precisam ir para o lixo. Ferva com água, cebola, salsinha e pimenta em grão por 20 minutos para um caldo de peixe caseiro — base perfeita para risotos e caldeiradas.`,
+                curio: `<h3>🌎 Você Sabia?</h3>A combinação de peixe com leite de coco é muito presente na culinária litorânea brasileira, especialmente na moqueca. A versão capixaba leva urucum e azeite de oliva, enquanto a baiana inclui dendê e é mais encorpada.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Peixe assado tem um cheiro que abre o apetite de toda a casa. Quando se adiciona o perfume do coco reduzindo na panela, a cozinha vira o lugar mais aconchegante do lar."`
             },
             {
                 chaves: ['abacaxi', 'laranja'],
                 imagem: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=600",
                 badge: "🍍 Doce",
                 titulo: "Abacaxi Grelhado ao Suco de Laranja",
-                texto: `<strong>Tempo:</strong> 15 min<br><br>
-<strong>Ingredientes:</strong> Fatias de abacaxi · suco de 2 laranjas · mel ou açúcar mascavo a gosto · folhas de hortelã para servir.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Grelhe as fatias de abacaxi numa frigideira quente com um fio de azeite ou manteiga até dourar dos dois lados.<br>
-2. Na mesma frigideira, adicione o suco de laranja e o mel.<br>
-3. Deixe reduzir por 2 minutos até formar uma calda brilhante.<br>
-4. Regue o abacaxi com a calda e sirva com folhas de hortelã.`,
-                dica: "♻️ Dica Anti-Desperdício: Não jogue fora a casca do abacaxi! Ferva-a com água, canela em pau e cravo por 15 minutos para fazer um chá digestivo delicioso."
+                texto: `<strong>Tempo:</strong> 15 min<br><br><strong>Ingredientes:</strong> Fatias de abacaxi · suco de 2 laranjas · mel ou açúcar mascavo a gosto · folhas de hortelã para servir.<br><br><strong>Modo de Preparo:</strong><br>1. Grelhe as fatias de abacaxi numa frigideira quente com um fio de azeite ou manteiga até dourar dos dois lados.<br>2. Na mesma frigideira, adicione o suco de laranja e o mel.<br>3. Deixe reduzir por 2 minutos até formar uma calda brilhante.<br>4. Regue o abacaxi com a calda e sirva com folhas de hortelã.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Sorvete de creme ou de coco · Iogurte grego natural · Queijo coalho grelhado · Granola artesanal crocante`,
+                beb: `<h3>🥤 Harmonização</h3>Chá de camomila gelado · Água de coco natural · Suco de maracujá suavizado · Vitamina de banana com mel`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Use abacaxi bem maduro — ele carameliza mais facilmente e a calda fica naturalmente mais doce. Uma pitada de canela no final transforma a sobremesa em algo verdadeiramente especial.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>A casca do abacaxi é um tesouro! Ferva com água, canela em pau e cravo por 15 minutos para fazer um chá digestivo delicioso. Também serve como base para um vinagre artesanal caseiro.`,
+                curio: `<h3>🌎 Você Sabia?</h3>O abacaxi contém bromelina, uma enzima que auxilia na digestão de proteínas — por isso é um ótimo complemento para refeições com carnes. O Brasil é um dos maiores produtores mundiais da fruta.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Uma sobremesa feita em quinze minutos que parece ter saído de um restaurante chique. O abacaxi grelhado com calda de laranja é daquelas receitas que surpreendem quem come e encantam quem faz."`
             },
             {
                 chaves: ['pêssego'],
                 imagem: "https://images.unsplash.com/photo-1543168256-418811576b50?w=600",
                 badge: "🍑 Doce",
                 titulo: "Pêssego ao Vinho Branco com Farofa Crocante",
-                texto: `<strong>Tempo:</strong> 20 min<br><br>
-<strong>Ingredientes:</strong> 4 pêssegos maduros · 1 taça de vinho branco seco · 2 colheres de açúcar · sorvete de creme · biscoito de amêndoas ou maisena triturado para a farofa.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Corte os pêssegos ao meio e retire o caroço.<br>
-2. Leve ao fogo numa frigideira com o vinho e o açúcar.<br>
-3. Cozinhe em fogo médio por 8 a 10 minutos, virando na metade, até ficarem macios e a calda reduzir.<br>
-4. Sirva com uma bola de sorvete de creme e polvilhe a farofa de biscoito por cima.`,
-                dica: "♻️ Dica Anti-Desperdício: A calda que sobrar na frigideira pode ser guardada e usada para adoçar iogurte ou vitaminas no dia seguinte."
+                texto: `<strong>Tempo:</strong> 20 min<br><br><strong>Ingredientes:</strong> 4 pêssegos maduros · 1 taça de vinho branco seco · 2 colheres de açúcar · sorvete de creme · biscoito de amêndoas ou maisena triturado para a farofa.<br><br><strong>Modo de Preparo:</strong><br>1. Corte os pêssegos ao meio e retire o caroço.<br>2. Leve ao fogo numa frigideira com o vinho e o açúcar.<br>3. Cozinhe em fogo médio por 8 a 10 minutos, virando na metade, até ficarem macios e a calda reduzir.<br>4. Sirva com uma bola de sorvete de creme e polvilhe a farofa de biscuit por cima.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Sorvete de baunilha ou de nozes · Chantilly natural · Biscoitos amanteigados · Calda de chocolate amargo`,
+                beb: `<h3>🥤 Harmonização</h3>O próprio vinho branco usado na receita · Espumante gelado · Chá de pêssego com baunilha · Suco de uva integral`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Escolha pêssegos firmes mas maduros — os muito moles desmancham na frigideira. Se não encontrar pêssegos frescos, os em calda (bem escorridos) também funcionam muito bem nessa receita.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>A calda que sobrar na frigideira é puro sabor! Guarde em um potinho e use para adoçar iogurte, vitaminas ou panquecas no café da manhã do dia seguinte.`,
+                curio: `<h3>🌎 Você Sabia?</h3>O pêssego é originário da China, onde era cultivado há mais de 4 mil anos. No Brasil, é produzido principalmente no Rio Grande do Sul e em Santa Catarina, onde o clima frio garante frutos mais doces. A safra vai de novembro a fevereiro.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Pêssego ao vinho é uma daquelas sobremesas que parecem sofisticadas mas são feitas com simplicidade e afeto. Ela aparece nas mesas em datas especiais — e quem prova uma vez sempre pede a receita."`
             },
             {
                 chaves: ['jabuticaba'],
                 imagem: "https://images.unsplash.com/photo-1590080875421-f0e633d7a8d5?w=600",
                 badge: "🍇 Doce · Especial",
                 titulo: "Jabuticabas Flambadas ao Conhaque",
-                texto: `<strong>Tempo:</strong> 15 min<br><br>
-<strong>Ingredientes:</strong> 2 xícaras de jabuticabas lavadas · 2 doses de conhaque · pitada de pimenta-do-reino · 1 colher de açúcar · creme de leite fresco para servir.<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Leve as jabuticabas a uma frigideira quente com o açúcar e deixe refogar por 2 minutos.<br>
-2. Adicione o conhaque e, com muito cuidado, flambe inclinando levemente a frigideira (ou use um palito de fósforo com cuidado).<br>
-3. Deixe a chama se apagar naturalmente. Finalize com a pimenta-do-reino.<br>
-4. Sirva imediatamente sobre o creme de leite fresco gelado.`,
-                dica: "♻️ Dica Anti-Desperdício: Os caroços das jabuticabas podem ser aproveitados para fazer uma geleia rústica com menos açúcar."
+                texto: `<strong>Tempo:</strong> 15 min<br><br><strong>Ingredientes:</strong> 2 xícaras de jabuticabas lavadas · 2 doses de conhaque · pitada de pimenta-do-reino · 1 colher de açúcar · creme de leite fresco para servir.<br><br><strong>Modo de Preparo:</strong><br>1. Leve as jabuticabas a uma frigideira quente com o açúcar e deixe refogar por 2 minutos.<br>2. Adicione o conhaque e, com muito cuidado, flambe inclinando levemente a frigideira (ou use um palito de fósforo).<br>3. Deixe a chama se apagar naturalmente. Finalize com a pimenta-do-reino.<br>4. Sirva imediatamente sobre o creme de leite fresco gelado.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Creme de leite fresco batido em ponto leve · Sorvete de creme · Queijo brie ou camembert · Biscoitos amanteigados`,
+                beb: `<h3>🥤 Harmonização</h3>Conhaque puro em dose pequena · Vinho do Porto · Chá preto com especiarias · Suco de uva tinto integral`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Ao flambar, afaste o rosto e mantenha uma tampa próxima para apagar a chama se necessário. O fogo apaga sozinho em poucos segundos e é isso que cria o sabor característico do prato.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>Os caroços das jabuticabas podem ser aproveitados para fazer uma geleia rústica com menos açúcar. As cascas, ricas em antocianinas, podem ser desidratadas e usadas para colorir naturalmente iogurtes e vitaminas.`,
+                curio: `<h3>🌎 Você Sabia?</h3>A jabuticaba é uma das frutas mais brasileiras que existem — praticamente não é cultivada em outros países. Ela nasce diretamente no tronco e nos galhos da árvore, o que a torna visualmente única no mundo. Sua safra é curta e irregular, o que a torna ainda mais especial.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Jabuticaba é fruta de quintal. Fruta de infância. De comer direto do pé com a mão roxa. Transformá-la em uma sobremesa flambada é uma forma de honrar uma memória simples com uma apresentação especial."`
             },
             {
                 chaves: ['morango'],
                 imagem: "https://images.unsplash.com/photo-1490457843367-34b21b6ccd85?w=600",
                 badge: "🍓 Doce · Geleia",
                 titulo: "Geleia Rústica de Morango com Toque de Gengibre",
-                texto: `<strong>Tempo:</strong> 25 min<br><br>
-<strong>Ingredientes:</strong> 500g de morangos maduros · 1 xícara de açúcar · suco de 1 limão · 1 pedacinho de gengibre fresco ralado (opcional, mas recomendado).<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Lave e pique os morangos grosseiramente, retirando o cabinho verde.<br>
-2. Leve ao fogo baixo numa panela com o açúcar, o suco de limão e o gengibre.<br>
-3. Mexa de vez em quando por 20 a 25 minutos, até a geleia engrossar e brilhar.<br>
-4. Teste o ponto: pingue uma gota num prato frio — se não escorrer, está pronta.<br>
-5. Despeje ainda quente em potes de vidro esterilizados e feche tampado.`,
-                dica: "♻️ Dica Anti-Desperdício: Os cabinhos verdes dos morangos podem ser infusionados em água quente para fazer um chá levemente frutado."
+                texto: `<strong>Tempo:</strong> 25 min<br><br><strong>Ingredientes:</strong> 500g de morangos maduros · 1 xícara de açúcar · suco de 1 limão · 1 pedacinho de gengibre fresco ralado (opcional, mas recomendado).<br><br><strong>Modo de Preparo:</strong><br>1. Lave e pique os morangos grosseiramente, retirando o cabinho verde.<br>2. Leve ao fogo baixo numa panela com o açúcar, o suco de limão e o gengibre.<br>3. Mexa de vez em quando por 20 a 25 minutos, até a geleia engrossar e brilhar.<br>4. Teste o ponto: pingue uma gota num prato frio — se não escorrer, está pronta.<br>5. Despeje ainda quente em potes de vidro esterilizados e feche tampado.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Torradas artesanais com manteiga · Queijo minas fresco · Iogurte grego natural · Panquecas ou crepes caseiros`,
+                beb: `<h3>🥤 Harmonização</h3>Chá de hibisco gelado · Limonada com hortelã · Café coado na hora · Leite quente com mel`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Para esterilizar os potes de vidro sem forno, ferva-os em água por 10 minutos e deixe secar de cabeça para baixo. A geleia bem vedada dura até 3 meses na geladeira e até 1 ano em local fresco e escuro (sem abrir).`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>Os cabinhos verdes dos morangos não vão para o lixo! Coloque-os em uma xícara com água quente por 5 minutos para fazer um chá levemente frutado. Os morangos com manchinhas são perfeitos para a geleia.`,
+                curio: `<h3>🌎 Você Sabia?</h3>O morango, botanicamente falando, não é uma fruta verdadeira — os pontinhos na superfície é que são os frutos! O Brasil é o maior produtor de morangos da América do Sul, e Atibaia, no interior de São Paulo, é considerada a capital nacional do morango.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Fazer geleia é um ato de paciência e carinho. O cheiro que toma conta da cozinha enquanto o morango cozinha com açúcar é um dos mais acolhedores que existem. Presentear alguém com um potinho de geleia caseira é dar um pedaço de tempo e afeto embalado em vidro."`
             },
             {
                 chaves: ['manga', 'hortelã'],
                 imagem: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600",
                 badge: "🥭 Bebida · Verão",
                 titulo: "Smoothie Tropical de Manga com Laranja e Hortelã",
-                texto: `<strong>Tempo:</strong> 5 min<br><br>
-<strong>Ingredientes:</strong> 1 manga madura descascada e picada · suco de 1 laranja · 6 a 8 folhas de hortelã fresca · pedras de gelo · água de coco (opcional, no lugar da água).<br><br>
-<strong>Modo de Preparo:</strong><br>
-1. Coloque a manga, o suco de laranja e as folhas de hortelã no liquidificador.<br>
-2. Adicione o gelo e bata em velocidade alta até obter um creme homogêneo.<br>
-3. Se quiser mais levinho, acrescente um pouco de água ou água de coco e bata mais um pouco.<br>
-4. Sirva imediatamente em copo gelado.`,
-                dica: "♻️ Dica Anti-Desperdício: A casca da manga pode ser usada para fazer um chá refrescante ou aromatizar água com rodelas de limão."
+                texto: `<strong>Tempo:</strong> 5 min<br><br><strong>Ingredientes:</strong> 1 manga madura descascada e picada · suco de 1 laranja · 6 a 8 folhas de hortelã fresca · pedras de gelo · água de coco (opcional).<br><br><strong>Modo de Preparo:</strong><br>1. Coloque a manga, o suco de laranja e as folhas de hortelã no liquidificador.<br>2. Adicione o gelo e bata em velocidade alta até obter um creme homogêneo.<br>3. Se quiser mais levinho, acrescente um pouco de água ou água de coco e bata mais um pouco.<br>4. Sirva imediatamente em copo gelado.`,
+                acomp: `<h3>🍽️ Acompanhamentos</h3>Tapioca recheada com coco · Castanhas e frutas secas · Bolo de cenoura fofinho · Biscoito integral caseiro`,
+                beb: `<h3>🥤 Harmonização</h3>Esta receita já é uma bebida! Para acompanhar, sirva água gelada com limão entre os goles para limpar o paladar e realçar ainda mais o sabor tropical.`,
+                dica: `<h3>💡 Dica Eco-Chef</h3>Congele cubos de manga madura quando ela estiver na época — assim você tem smoothie tropical o ano todo. A manga congelada também deixa a textura mais cremosa e encorpada, sem precisar de gelo extra.`,
+                aprov: `<h3>♻️ Aproveitamento Consciente</h3>A casca da manga, bem lavada, pode aromatizar água com rodelas de limão e folhas de hortelã. O caroço, após seco, pode ser triturado e usado como adubo natural para plantas. Nada se perde!`,
+                curio: `<h3>🌎 Você Sabia?</h3>A manga é originária da Índia e do Sudeste Asiático, cultivada há mais de 4 mil anos. O Brasil é hoje um dos maiores exportadores mundiais. A variedade Palmer, muito comum nos mercados brasileiros, foi desenvolvida para suportar o clima tropical úmido do país.`,
+                mem: `<h3>❤️ Memórias da Cozinha</h3>"Tem algo muito refrescante e alegre em um copo de smoothie de manga — ele parece trazer o verão em cada gole. É a bebida perfeita para uma tarde quente, uma conversa boa ou simplesmente para dar aquele ânimo que o dia pede."`
             }
         ];
 
         function gerarReceita() {
             const input = document.getElementById('ingredientes').value.toLowerCase()
                 .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-            function norm(s) {
-                return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            }
-
+            function norm(s) { return s.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
             const resultBox = document.getElementById('resultBox');
-
-            const encontrada = receitas.find(r =>
-                r.chaves.every(k => input.includes(norm(k)))
-            ) || receitas.find(r =>
-                r.chaves.some(k => input.includes(norm(k)))
-            );
-
-            if (!input.trim()) {
-                alert("Digite pelo menos um ingrediente para buscar!");
-                return;
-            }
-
+            if (!input.trim()) { alert("Digite pelo menos um ingrediente para buscar!"); return; }
+            const encontrada = receitas.find(r => r.chaves.every(k => input.includes(norm(k)))) || receitas.find(r => r.chaves.some(k => input.includes(norm(k))));
             if (encontrada) {
                 document.getElementById('recipeImage').src = encontrada.imagem;
+                document.getElementById('recipeImage').style.display = 'block';
                 document.getElementById('recipeBadge').innerText = encontrada.badge;
                 document.getElementById('recipeTitle').innerText = encontrada.titulo;
                 document.getElementById('recipeText').innerHTML = encontrada.texto;
-                document.getElementById('recipeDica').innerText = encontrada.dica;
-                resultBox.style.display = 'block';
-                resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById('secAcomp').innerHTML = encontrada.acomp;
+                document.getElementById('secBeb').innerHTML = encontrada.beb;
+                document.getElementById('secDica').innerHTML = encontrada.dica;
+                document.getElementById('secAprov').innerHTML = encontrada.aprov;
+                document.getElementById('secCurio').innerHTML = encontrada.curio;
+                document.getElementById('secMem').innerHTML = encontrada.mem;
+                ['secAcomp','secBeb','secDica','secAprov','secCurio','secMem'].forEach(id => document.getElementById(id).style.display = 'block');
             } else {
-                document.getElementById('recipeImage').src = "";
+                document.getElementById('recipeImage').style.display = 'none';
                 document.getElementById('recipeBadge').innerText = "";
                 document.getElementById('recipeTitle').innerText = "Receita ainda não cadastrada";
-                document.getElementById('recipeText').innerHTML =
-                    "Ainda não temos essa combinação no nosso cardápio.<br><br>Que tal tentar: <strong>pinhão · carne seca · abóbora · peixe · pêssego · morango · manga · abacaxi · jabuticaba · milho</strong>?";
-                document.getElementById('recipeDica').innerText = "";
-                resultBox.style.display = 'block';
+                document.getElementById('recipeText').innerHTML = "Ainda não temos essa combinação no nosso cardápio.<br><br>Que tal tentar: <strong>pinhão · carne seca · abóbora · peixe · pêssego · morango · manga · abacaxi · jabuticaba · milho</strong>?";
+                ['secAcomp','secBeb','secDica','secAprov','secCurio','secMem'].forEach(id => document.getElementById(id).style.display = 'none');
             }
+            resultBox.style.display = 'block';
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function limparTudo() {
@@ -454,9 +283,6 @@
         document.getElementById('ingredientes').addEventListener('keydown', function(e) {
             if (e.key === 'Enter') gerarReceita();
         });
-  
     </script>
-
-
-
-
+</body>
+</html>
