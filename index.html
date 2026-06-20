@@ -63,6 +63,24 @@
         .sec-mem { background: #f1f8ec; border-left: 4px solid #2e5c1e; color: #2e4a18; font-style: italic; }
         .sec-mem h3 { color: #2e5c1e; font-style: normal; }
 
+        .sec-relac { background: #fafff7; border: 1px solid #d6e8cc; border-left: 4px solid #2e5c1e; }
+        .sec-relac h3 { color: #2e5c1e; }
+        .relac-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+        .relac-item {
+            display: block;
+            background: white;
+            border: 1px solid #d6e8cc;
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: #2e5c1e;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+        .relac-item:hover { background-color: #eef7e8; }
+
         .divider { border: none; border-top: 1px solid #e0ddd5; margin: 28px 0 24px; }
 
         .btn-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background-color: #25D366; color: white; text-decoration: none; padding: 15px; border-radius: 12px; font-size: 1rem; font-weight: 700; font-family: 'Lato', sans-serif; transition: background-color 0.3s; }
@@ -147,6 +165,7 @@
             <div id="secAprov" class="extra-section sec-aprov"></div>
             <div id="secCurio" class="extra-section sec-curio"></div>
             <div id="secMem" class="extra-section sec-mem"></div>
+            <div id="secRelac" class="extra-section sec-relac"></div>
         </div>
 
         <hr class="divider">
@@ -172,6 +191,8 @@
                 imagem: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600",
                 badge: "🍲 Salgado · Inverno",
                 titulo: "Sopa Cremosa de Pinhão com Carne Seca",
+                id: "pinhao-carne",
+                relacionadas: ['peixe-pinhao', 'abobora-carne'],
                 texto: `<strong>Tempo:</strong> 50 min<br><br><strong>Ingredientes:</strong> 500g de pinhão cozido e descascado · 200g de carne seca dessalgada e desfiada · 200ml de leite de coco · 1 cebola · 3 dentes de alho · caldo de legumes · cebolinha · sal e pimenta a gosto.<br><br><strong>Modo de Preparo:</strong><br>1. Bata metade do pinhão cozido com o leite de coco no liquidificador até obter um creme liso.<br>2. Refogue a carne seca com cebola e alho em uma panela com um fio de azeite.<br>3. Acrescente o creme de pinhão e os pinhões inteiros restantes. Ajuste o sal.<br>4. Deixe apurar em fogo baixo por 10 minutos, mexendo de vez em quando.<br>5. Finalize com cebolinha fresca picada e sirva bem quente.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz branco soltinho · Pão de queijo quentinho · Salada verde com rúcula e tomate · Farofa crocante de manteiga`,
                 beb: `<h3>🥤 Harmonização</h3>Chá preto com limão · Suco de laranja natural · Cachaça artesanal gelada · Água com rodelas de limão e hortelã`,
@@ -185,6 +206,8 @@
                 imagem: "https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=600",
                 badge: "🌽 Salgado",
                 titulo: "Creme de Milho com Carne Seca ao Leite de Coco",
+                id: "milho-carne",
+                relacionadas: ['abobora-carne', 'pinhao-carne'],
                 texto: `<strong>Tempo:</strong> 35 min<br><br><strong>Ingredientes:</strong> 2 latas de milho · 200g de carne seca dessalgada e desfiada · 200ml de leite de coco · 1 cebola · 2 dentes de alho · 1 colher de sopa de manteiga · sal e coentro ou salsinha a gosto.<br><br><strong>Modo de Preparo:</strong><br>1. Bata o milho com o leite de coco no liquidificador até virar um creme.<br>2. Refogue a carne seca desfiada com cebola e alho na manteiga.<br>3. Adicione o creme de milho à panela e mexa em fogo médio até encorpar.<br>4. Acerte o sal e finalize com ervas frescas na hora de servir.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz branco · Banana frita crocante · Torradas artesanais · Salada de agrião com tomate cereja`,
                 beb: `<h3>🥤 Harmonização</h3>Suco de maracujá natural · Limonada suíça · Chá de erva-cidreira gelado · Água de coco`,
@@ -198,6 +221,8 @@
                 imagem: "https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=600",
                 badge: "🎃 Salgado",
                 titulo: "Abóbora Recheada com Carne Seca",
+                id: "abobora-carne",
+                relacionadas: ['pinhao-carne', 'milho-carne'],
                 texto: `<strong>Tempo:</strong> 60 min<br><br><strong>Ingredientes:</strong> 1 abóbora cabotiá média · 300g de carne seca dessalgada e desfiada · requeijão cremoso a gosto · muçarela para gratinar · azeite · sal e pimenta.<br><br><strong>Modo de Preparo:</strong><br>1. Corte a abóbora ao meio, remova as sementes e pincele azeite na casca.<br>2. Leve ao forno a 200°C por 30 minutos ou até amaciar.<br>3. Retire parte da polpa, misture com a carne seca refogada e o requeijão.<br>4. Recheie a abóbora, cubra com muçarela e leve ao forno por mais 15 minutos até gratinar.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz branco com alho · Salada de folhas verdes · Farofa de bacon · Pão caseiro quentinho`,
                 beb: `<h3>🥤 Harmonização</h3>Suco de goiaba natural · Chá de gengibre com limão · Água saborizada com pepino e hortelã · Vinho tinto suave`,
@@ -211,6 +236,8 @@
                 imagem: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600",
                 badge: "🐟 Salgado",
                 titulo: "Peixe Assado com Crosta de Pinhão e Molho de Coco",
+                id: "peixe-pinhao",
+                relacionadas: ['pinhao-carne', 'abacaxi-laranja'],
                 texto: `<strong>Tempo:</strong> 60 min<br><br><strong>Ingredientes:</strong> Filé de peixe branco (tilápia, merluza ou robalo) · pinhão cozido e picado · 200ml de leite de coco · cebolinha · azeite · alho · sal e limão.<br><br><strong>Modo de Preparo:</strong><br>1. Tempere o filé com sal, limão e alho e deixe marinar por 15 minutos.<br>2. Cubra a parte superior com os pinhões picados, pressionando levemente.<br>3. Leve ao forno a 180°C por 25 a 30 minutos.<br>4. Enquanto isso, reduza o leite de coco com cebolinha em fogo baixo até formar um molho cremoso.<br>5. Sirva o peixe regado com o molho de coco.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Arroz de limão siciliano · Legumes assados no azeite · Purê de batata-doce · Salada de folhas com molho de iogurte`,
                 beb: `<h3>🥤 Harmonização</h3>Vinho branco seco gelado · Suco de abacaxi com hortelã · Água com limão e gengibre · Chá verde gelado`,
@@ -224,6 +251,8 @@
                 imagem: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=600",
                 badge: "🍍 Doce",
                 titulo: "Abacaxi Grelhado ao Suco de Laranja",
+                id: "abacaxi-laranja",
+                relacionadas: ['manga-smoothie', 'morango-geleia'],
                 texto: `<strong>Tempo:</strong> 15 min<br><br><strong>Ingredientes:</strong> Fatias de abacaxi · suco de 2 laranjas · mel ou açúcar mascavo a gosto · folhas de hortelã para servir.<br><br><strong>Modo de Preparo:</strong><br>1. Grelhe as fatias de abacaxi numa frigideira quente com um fio de azeite ou manteiga até dourar dos dois lados.<br>2. Na mesma frigideira, adicione o suco de laranja e o mel.<br>3. Deixe reduzir por 2 minutos até formar uma calda brilhante.<br>4. Regue o abacaxi com a calda e sirva com folhas de hortelã.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Sorvete de creme ou de coco · Iogurte grego natural · Queijo coalho grelhado · Granola artesanal crocante`,
                 beb: `<h3>🥤 Harmonização</h3>Chá de camomila gelado · Água de coco natural · Suco de maracujá suavizado · Vitamina de banana com mel`,
@@ -237,6 +266,8 @@
                 imagem: "https://images.unsplash.com/photo-1543168256-418811576b50?w=600",
                 badge: "🍑 Doce",
                 titulo: "Pêssego ao Vinho Branco com Farofa Crocante",
+                id: "pessego-vinho",
+                relacionadas: ['jabuticaba-conhaque', 'morango-geleia'],
                 texto: `<strong>Tempo:</strong> 20 min<br><br><strong>Ingredientes:</strong> 4 pêssegos maduros · 1 taça de vinho branco seco · 2 colheres de açúcar · sorvete de creme · biscoito de amêndoas ou maisena triturado para a farofa.<br><br><strong>Modo de Preparo:</strong><br>1. Corte os pêssegos ao meio e retire o caroço.<br>2. Leve ao fogo numa frigideira com o vinho e o açúcar.<br>3. Cozinhe em fogo médio por 8 a 10 minutos, virando na metade, até ficarem macios e a calda reduzir.<br>4. Sirva com uma bola de sorvete de creme e polvilhe a farofa de biscoito por cima.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Sorvete de baunilha ou de nozes · Chantilly natural · Biscoitos amanteigados · Calda de chocolate amargo`,
                 beb: `<h3>🥤 Harmonização</h3>O próprio vinho branco usado na receita · Espumante gelado · Chá de pêssego com baunilha · Suco de uva integral`,
@@ -250,6 +281,8 @@
                 imagem: "https://images.unsplash.com/photo-1590080875421-f0e633d7a8d5?w=600",
                 badge: "🍇 Doce · Especial",
                 titulo: "Jabuticabas Flambadas ao Conhaque",
+                id: "jabuticaba-conhaque",
+                relacionadas: ['pessego-vinho', 'morango-geleia'],
                 texto: `<strong>Tempo:</strong> 15 min<br><br><strong>Ingredientes:</strong> 2 xícaras de jabuticabas lavadas · 2 doses de conhaque · pitada de pimenta-do-reino · 1 colher de açúcar · creme de leite fresco para servir.<br><br><strong>Modo de Preparo:</strong><br>1. Leve as jabuticabas a uma frigideira quente com o açúcar e deixe refogar por 2 minutos.<br>2. Adicione o conhaque e, com muito cuidado, flambe inclinando levemente a frigideira (ou use um palito de fósforo).<br>3. Deixe a chama se apagar naturalmente. Finalize com a pimenta-do-reino.<br>4. Sirva imediatamente sobre o creme de leite fresco gelado.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Creme de leite fresco batido em ponto leve · Sorvete de creme · Queijo brie ou camembert · Biscoitos amanteigados`,
                 beb: `<h3>🥤 Harmonização</h3>Conhaque puro em dose pequena · Vinho do Porto · Chá preto com especiarias · Suco de uva tinto integral`,
@@ -263,6 +296,8 @@
                 imagem: "https://images.unsplash.com/photo-1490457843367-34b21b6ccd85?w=600",
                 badge: "🍓 Doce · Geleia",
                 titulo: "Geleia Rústica de Morango com Toque de Gengibre",
+                id: "morango-geleia",
+                relacionadas: ['jabuticaba-conhaque', 'manga-smoothie'],
                 texto: `<strong>Tempo:</strong> 25 min<br><br><strong>Ingredientes:</strong> 500g de morangos maduros · 1 xícara de açúcar · suco de 1 limão · 1 pedacinho de gengibre fresco ralado (opcional, mas recomendado).<br><br><strong>Modo de Preparo:</strong><br>1. Lave e pique os morangos grosseiramente, retirando o cabinho verde.<br>2. Leve ao fogo baixo numa panela com o açúcar, o suco de limão e o gengibre.<br>3. Mexa de vez em quando por 20 a 25 minutos, até a geleia engrossar e brilhar.<br>4. Teste o ponto: pingue uma gota num prato frio — se não escorrer, está pronta.<br>5. Despeje ainda quente em potes de vidro esterilizados e feche tampado.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Torradas artesanais com manteiga · Queijo minas fresco · Iogurte grego natural · Panquecas ou crepes caseiros`,
                 beb: `<h3>🥤 Harmonização</h3>Chá de hibisco gelado · Limonada com hortelã · Café coado na hora · Leite quente com mel`,
@@ -276,6 +311,8 @@
                 imagem: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600",
                 badge: "🥭 Bebida · Verão",
                 titulo: "Smoothie Tropical de Manga com Laranja e Hortelã",
+                id: "manga-smoothie",
+                relacionadas: ['abacaxi-laranja', 'morango-geleia'],
                 texto: `<strong>Tempo:</strong> 5 min<br><br><strong>Ingredientes:</strong> 1 manga madura descascada e picada · suco de 1 laranja · 6 a 8 folhas de hortelã fresca · pedras de gelo · água de coco (opcional).<br><br><strong>Modo de Preparo:</strong><br>1. Coloque a manga, o suco de laranja e as folhas de hortelã no liquidificador.<br>2. Adicione o gelo e bata em velocidade alta até obter um creme homogêneo.<br>3. Se quiser mais levinho, acrescente um pouco de água ou água de coco e bata mais um pouco.<br>4. Sirva imediatamente em copo gelado.`,
                 acomp: `<h3>🍽️ Acompanhamentos</h3>Tapioca recheada com coco · Castanhas e frutas secas · Bolo de cenoura fofinho · Biscoito integral caseiro`,
                 beb: `<h3>🥤 Harmonização</h3>Esta receita já é uma bebida! Para acompanhar, sirva água gelada com limão entre os goles para limpar o paladar e realçar ainda mais o sabor tropical.`,
@@ -286,6 +323,48 @@
             }
         ];
 
+        function mostrarReceitaPorId(id) {
+            const r = receitas.find(rec => rec.id === id);
+            if (r) {
+                document.getElementById('ingredientes').value = r.chaves[0];
+                exibirReceita(r);
+                document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function exibirReceita(encontrada) {
+            document.getElementById('recipeImage').src = encontrada.imagem;
+            document.getElementById('recipeImage').style.display = 'block';
+            document.getElementById('recipeBadge').innerText = encontrada.badge;
+            document.getElementById('recipeTitle').innerText = encontrada.titulo;
+            document.getElementById('recipeText').innerHTML = encontrada.texto;
+            document.getElementById('secAcomp').innerHTML = encontrada.acomp;
+            document.getElementById('secBeb').innerHTML = encontrada.beb;
+            document.getElementById('secDica').innerHTML = encontrada.dica;
+            document.getElementById('secAprov').innerHTML = encontrada.aprov;
+            document.getElementById('secCurio').innerHTML = encontrada.curio;
+            document.getElementById('secMem').innerHTML = encontrada.mem;
+
+            const relacBox = document.getElementById('secRelac');
+            if (encontrada.relacionadas && encontrada.relacionadas.length > 0) {
+                let html = '<h3>🍲 Você Também Pode Gostar</h3><div class="relac-list">';
+                encontrada.relacionadas.forEach(rid => {
+                    const rec = receitas.find(rr => rr.id === rid);
+                    if (rec) {
+                        html += `<button class="relac-item" onclick="mostrarReceitaPorId('${rid}')">➡️ ${rec.titulo}</button>`;
+                    }
+                });
+                html += '</div>';
+                relacBox.innerHTML = html;
+                relacBox.style.display = 'block';
+            } else {
+                relacBox.style.display = 'none';
+            }
+
+            ['secAcomp','secBeb','secDica','secAprov','secCurio','secMem'].forEach(id => document.getElementById(id).style.display = 'block');
+            document.getElementById('resultBox').style.display = 'block';
+        }
+
         function gerarReceita() {
             const input = document.getElementById('ingredientes').value.toLowerCase()
                 .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -294,26 +373,15 @@
             if (!input.trim()) { alert("Digite pelo menos um ingrediente para buscar!"); return; }
             const encontrada = receitas.find(r => r.chaves.every(k => input.includes(norm(k)))) || receitas.find(r => r.chaves.some(k => input.includes(norm(k))));
             if (encontrada) {
-                document.getElementById('recipeImage').src = encontrada.imagem;
-                document.getElementById('recipeImage').style.display = 'block';
-                document.getElementById('recipeBadge').innerText = encontrada.badge;
-                document.getElementById('recipeTitle').innerText = encontrada.titulo;
-                document.getElementById('recipeText').innerHTML = encontrada.texto;
-                document.getElementById('secAcomp').innerHTML = encontrada.acomp;
-                document.getElementById('secBeb').innerHTML = encontrada.beb;
-                document.getElementById('secDica').innerHTML = encontrada.dica;
-                document.getElementById('secAprov').innerHTML = encontrada.aprov;
-                document.getElementById('secCurio').innerHTML = encontrada.curio;
-                document.getElementById('secMem').innerHTML = encontrada.mem;
-                ['secAcomp','secBeb','secDica','secAprov','secCurio','secMem'].forEach(id => document.getElementById(id).style.display = 'block');
+                exibirReceita(encontrada);
             } else {
                 document.getElementById('recipeImage').style.display = 'none';
                 document.getElementById('recipeBadge').innerText = "";
                 document.getElementById('recipeTitle').innerText = "Receita ainda não cadastrada";
                 document.getElementById('recipeText').innerHTML = "Ainda não temos essa combinação no nosso cardápio.<br><br>Que tal tentar: <strong>pinhão · carne seca · abóbora · peixe · pêssego · morango · manga · abacaxi · jabuticaba · milho</strong>?";
-                ['secAcomp','secBeb','secDica','secAprov','secCurio','secMem'].forEach(id => document.getElementById(id).style.display = 'none');
+                ['secAcomp','secBeb','secDica','secAprov','secCurio','secMem','secRelac'].forEach(id => document.getElementById(id).style.display = 'none');
+                resultBox.style.display = 'block';
             }
-            resultBox.style.display = 'block';
             resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
